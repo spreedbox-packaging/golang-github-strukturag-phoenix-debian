@@ -1,0 +1,89 @@
+golang-phoenix (0.13.1-1) precise; urgency=low
+
+  * Internal packaging release.
+
+ -- Joachim Bauch <bauch@struktur.de>  Tue, 21 Jul 2015 10:35:42 +0200
+
+golang-phoenix (0.13.0-1) precise; urgency=low
+
+  * Add README for project.
+  * Clean up some lint warning.
+  * Fix a panic when multiple services fail to start.
+
+ -- Lance Cooper <lance@struktur.de>  Fri, 03 Apr 2015 18:41:34 -0500
+
+golang-phoenix (0.12.0-1) precise; urgency=low
+
+  * Add support for fetching configuration values with a default.
+  * Expose getter for float64 config items.
+  * Support reloading configuration on SIGHUP.
+    Services which implement Reloadable will be notified on reload.
+  * Add support for handling start/stop of generic services.
+    Optional hook interfaces are provided for notification purposes.
+  * Improves HTTP(S) shutdown logging.
+
+ -- Lance Cooper <lance@struktur.de>  Tue, 01 Jul 2014 21:17:56 -0500
+
+golang-phoenix (0.11.0-1) precise; urgency=low
+
+  * Add HTTPS support.
+  * Clean up documentation.
+  * API is now considered stable.
+
+ -- Lance Cooper <lance@struktur.de>  Wed, 07 May 2014 12:59:35 -0500
+
+golang-phoenix (0.1.0-2) precise; urgency=low
+
+  * Corrected absolute package path.
+
+ -- Lance Cooper <lance@struktur.de>  Thu, 13 Mar 2014 15:36:01 -0500
+
+golang-phoenix (0.1.0-1) precise; urgency=low
+
+  * Initial externally packaged release.
+
+ -- Lance Cooper <lance@struktur.de>  Wed, 12 Mar 2014 14:38:05 -0500
+
+golang-phoenix (0.1.0) precise; urgency=low
+
+  * Initial public release.
+
+ -- Simon Eisenmann <simon@struktur.de>  Thu, 13 Feb 2014 14:43:07 +0100
+
+golang-phoenix (0.0.6) precise; urgency=low
+
+  * Fix handling of panics during server startup.
+  * Add support for setting configuration defaults prior to
+    server startup.
+
+ -- Lance Cooper <lance@struktur.de>  Thu, 02 Jan 2014 17:06:25 -0600
+
+golang-phoenix (0.0.5) precise; urgency=low
+
+  * Fix exception on startup when no configfile was specified.
+
+ -- Lance Cooper <lance@struktur.de>  Mon, 21 Oct 2013 14:58:05 -0500
+
+golang-phoenix (0.0.4) precise; urgency=low
+
+  * Fix build and installed dependencies.
+
+ -- Lance Cooper <lance@struktur.de>  Wed, 16 Oct 2013 11:28:11 -0500
+
+golang-phoenix (0.0.3) precise; urgency=low
+
+  * Add ability to fetch app name and version strings.
+
+ -- Lance Cooper <lance@struktur.de>  Wed, 02 Oct 2013 11:34:43 +0200
+
+golang-phoenix (0.0.2) precise; urgency=low
+
+  * Breaking change: fix blocking portion of api.
+
+ -- Lance Cooper <lance@struktur.de>  Fri, 27 Sep 2013 15:23:40 +0200
+
+golang-phoenix (0.0.1) precise; urgency=low
+
+  * Initial release.
+
+ -- Lance Cooper <lance@struktur.de>  Fri, 27 Sep 2013 13:27:17 +0200

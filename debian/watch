@@ -1,0 +1,4 @@
+version=3
+
+# Tagging format isn't actually accurate, so make an x.x.xx inference.
+http://github.com/strukturag/phoenix/tags/ /strukturag/phoenix/archive/phoenix_v(\d)(\d+)(\d+).tar.gz
