@@ -1,3 +1,10 @@
+golang-phoenix (0.13.2-1) precise; urgency=low
+
+  * Imported Upstream version 0.13.2
+  * Depend on "golang-goconf-dev" 0.2 or newer to get new Github import path.
+
+ -- Joachim Bauch <bauch@struktur.de>  Wed, 27 Jan 2016 12:20:11 +0100
+
 golang-phoenix (0.13.1-1) precise; urgency=low
 
   * Internal packaging release.
