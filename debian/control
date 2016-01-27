@@ -7,7 +7,7 @@ Build-Depends:
  debhelper (>= 8),
  dh-golang,
  golang-go (>= 1.1),
- golang-goconf-dev,
+ golang-goconf-dev (>= 0.2),
  golang-httputils-dev (>= 0.1.2)
 Standards-Version: 3.9.3
 
@@ -17,7 +17,7 @@ Architecture: all
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- golang-goconf-dev,
+ golang-goconf-dev (>= 0.2),
  golang-httputils-dev (>= 0.1.2)
 Description: phoenix
  is a Golang library providing support functionality for application startup,
