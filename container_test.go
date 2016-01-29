@@ -5,6 +5,9 @@
 package phoenix
 
 import (
+	"fmt"
+	"log"
+	"os"
 	"testing"
 )
 
@@ -45,5 +48,27 @@ func Test_Container_Name_DefaultstoUnreleasedIfUnset(t *testing.T) {
 	container := newTestContainer("", "")
 	if expected, actual := "unreleased", container.Version(); expected != actual {
 		t.Errorf("Expected app version to be '%s', but was '%s'", expected, actual)
+	}
+}
+
+func Test_Container_Syslog(t *testing.T) {
+	logFilename := "syslog"
+	container, err := newContainer("test", "", &logFilename, nil)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "WARNING: Could not create container, test will be skipped: '%v'\n", err)
+		return
+	}
+	if err := container.Close(); err != nil {
+		t.Errorf("Closing the syslog container returned '%v'", err)
+	}
+	log.Println("Testing")
+	fp, err := os.Open(logFilename)
+	if fp != nil {
+		fp.Close()
+	}
+	if err == nil {
+		t.Errorf("Logging created a file '%s' but should have logged to syslog", logFilename)
+	} else if !os.IsNotExist(err) {
+		t.Errorf("Logfile '%s' could not be opened but should not exist: '%v'", logFilename, err)
 	}
 }

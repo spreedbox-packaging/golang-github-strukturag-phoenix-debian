@@ -2,6 +2,8 @@
 # https://travis-ci.org/strukturag/phoenix/
 language: go
 
+sudo: false
+
 go:
   - 1.1
   - 1.2
@@ -14,3 +16,7 @@ install:
   - go get github.com/dlintw/goconf
   - go get github.com/strukturag/httputils
   - go get -d -v ./... && go build -v ./...
+
+script:
+  - ./tools/check-go-fmt.sh
+  - go test -v ./...
