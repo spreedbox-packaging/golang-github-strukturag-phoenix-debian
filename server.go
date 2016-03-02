@@ -1,4 +1,4 @@
-// Copyright 2014 struktur AG. All rights reserved.
+// Copyright 2016 struktur AG. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
@@ -31,6 +31,12 @@ type Server interface {
 
 	// Config sets the path to the application's main config file.
 	Config(path *string) Server
+
+	// DefaultConfig sets the path to the application's default config file.
+	DefaultConfig(path *string) Server
+
+	// OverrideConfig sets the path to the application's override config file.
+	OverrideConfig(path *string) Server
 
 	// Log sets the path to the application's logfile. Defaults to stderr if unset.
 	Log(path *string) Server
@@ -83,6 +89,16 @@ func (server *server) OverrideOption(section, name, value string) Server {
 
 func (server *server) Config(path *string) Server {
 	server.config.SetPath(*path)
+	return server
+}
+
+func (server *server) DefaultConfig(path *string) Server {
+	server.config.SetDefaultPath(*path)
+	return server
+}
+
+func (server *server) OverrideConfig(path *string) Server {
+	server.config.SetOverridePath(*path)
 	return server
 }
 
