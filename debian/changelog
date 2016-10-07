@@ -1,3 +1,9 @@
+golang-phoenix (1.0.2-1) trusty; urgency=medium
+
+  * Imported Upstream version 1.0.2
+
+ -- Simon Eisenmann <simon@struktur.de>  Fri, 07 Oct 2016 09:46:11 +0200
+
 golang-phoenix (1.0.1-1) trusty; urgency=medium
 
   * Imported Upstream version 1.0.1
